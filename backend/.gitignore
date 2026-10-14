@@ -1,0 +1,15 @@
+# Compiled binaries
+/photobox-server
+/server
+*.exe
+
+# Environment
+.env
+.env.local
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log

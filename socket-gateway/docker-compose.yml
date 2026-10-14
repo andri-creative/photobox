@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  photobox-socket-gateway:
+    build: .
+    container_name: photobox-socket-gateway
+    ports:
+      - "13001:13001"
+    environment:
+      - SOCKET_GATEWAY_PORT=13001
+      - JWT_SECRET=your-secret-key-change-in-production
+      - DB_HOST=192.168.110.220
+      - DB_PORT=25432
+      - DB_USER=postgres
+      - DB_PASSWORD=admin123
+      - DB_NAME=photobox
+    restart: unless-stopped

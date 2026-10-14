@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  photobox-frontend:
+    build: .
+    container_name: photobox-frontend
+    ports:
+      - "5173:80"
+    environment:
+      - VITE_BACKEND_URL=http://192.168.110.220:18080
+      - VITE_SOCKET_URL=http://192.168.110.220:13001
+    restart: unless-stopped
