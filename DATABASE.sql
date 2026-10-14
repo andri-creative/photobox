@@ -1,0 +1,9 @@
+-- ============================================
+-- PhotoBox Database Setup
+-- ============================================
+-- Cara menjalankan:
+--   psql -h 192.168.110.220 -p 25432 -U postgres -W -c "CREATE DATABASE photobox;"
+--   Password: admin123
+-- ============================================
+-- Tabel akan di-auto-migrate oleh backend (GORM AutoMigrate)
+-- ============================================
