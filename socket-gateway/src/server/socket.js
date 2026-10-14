@@ -2,13 +2,13 @@ const { createServer } = require('http');
 const { Server } = require('socket.io');
 const cors = require('cors');
 const express = require('express');
-const config = require('./config/env');
-const { authMiddleware, rateLimitMiddleware, heartbeatCheck } = require('./middleware/auth');
-const { registerSocket, removeSocket, updatePing, activeSockets } = require('./utils/id-generator');
-const { validateJoinToken } = require('./services/token-validator');
-const { addUser, removeUser, getRoomUsers } = require('./services/presence');
-const { setLastFrame } = require('./services/camera-stream');
-const { triggerCapture } = require('./services/photo-capture');
+const config = require('../config/env');
+const { authMiddleware, rateLimitMiddleware, heartbeatCheck } = require('../middleware/auth');
+const { registerSocket, removeSocket, updatePing, activeSockets } = require('../utils/id-generator');
+const { validateJoinToken } = require('../services/token-validator');
+const { addUser, removeUser, getRoomUsers } = require('../services/presence');
+const { setLastFrame } = require('../services/camera-stream');
+const { triggerCapture } = require('../services/photo-capture');
 
 function setupSocket(io) {
   const roomCache = new Map(); // sessionCode → active socket info
